@@ -42,7 +42,8 @@ For jupyter notebook related instructions, see https://git.rcc.uchicago.edu/ivy2
 6. Point the browser running on your laptop/desktop to this URL. Notice: compute nodes are only visible on internal uchicago network. Therefore, you either need to be on campus or use VPN to be able to use this method.
 
 7. **To use GPU-accelerated libraries in jupyter notebook, use Python [conda env:DL_GPU] kernel.** (although, I'm not sure. The default kernel seems to use cuda. However, you can check -->) In the notebook, check whether it works by running.
-```sh
+```python
+import torch
 torch.cuda.is_available()   --> Should be True
 torch.backends.cudnn.enabled    --> Should be True
 ```
