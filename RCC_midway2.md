@@ -31,9 +31,9 @@ For jupyter notebook related instructions, see https://git.rcc.uchicago.edu/ivy2
 (fastai) [kywch@midway2-gpu01 ~]$ ifconfig eth0 | grep 'inet '
         inet 10.50.221.191  netmask 255.255.252.0  broadcast 10.50.223.255
 ```
-3. Start jupyter without launching a browser on the node, using the ip address optained above: 
+3. Start jupyter without launching a browser on the node (add & at the end to run in the background), using the ip address obtained above: 
 ```sh
-(fastai) [kywch@midway2-gpu01 ~]$ jupyter notebook --no-browser --ip=10.50.221.191
+(fastai) [kywch@midway2-gpu01 ~]$ jupyter notebook --no-browser --ip=10.50.221.191 &
 ```
 4. By default, it would listen on port 8888. However, if the port is already taken by another user, it will complain. Try the next available port with --port=<port number> option.
 
@@ -47,7 +47,12 @@ torch.cuda.is_available()   --> Should be True
 torch.backends.cudnn.enabled    --> Should be True
 ```
 
-8. To kill jupyter, press Ctrl+c and then confirm with y that you want to stop it
+8. Monitor the gpu usage by running nvidia-smi (also in the background, so the console will get messy). The below script will update the gpu usage every second.
+```sh
+(fastai) [kywch@midway2-gpu01 ~]$ nvidia-smi -l 1 &
+```
+
+9. To kill jupyter and nvidia-smi, ps to get pids and kill those
 
 
 
