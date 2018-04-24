@@ -12,7 +12,7 @@ Once logged in to a gpu2 node, open two terminals.
 xterm &
 xterm &
 ```
-In one terminal, run htop to monitor the CPU/RAM usage
+In one terminal, run htop to monitor the CPU/RAM usage. Then press F4 for filter and enter the user id
 ```sh
 htop
 ```
