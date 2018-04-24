@@ -44,8 +44,8 @@ For jupyter notebook related instructions, see https://git.rcc.uchicago.edu/ivy2
 7. **To use GPU-accelerated libraries in jupyter notebook, use Python [conda env:DL_GPU] kernel.** (although, I'm not sure. The default kernel seems to use cuda. However, you can check -->) In the notebook, check whether it works by running.
 ```python
 import torch
-torch.cuda.is_available()   --> Should be True
-torch.backends.cudnn.enabled    --> Should be True
+torch.cuda.is_available()       # Should be True
+torch.backends.cudnn.enabled    # Should be True
 ```
 
 8. Monitor the gpu usage by running nvidia-smi. The below script will update the gpu usage every second. Use ctrl-c to stop it.
