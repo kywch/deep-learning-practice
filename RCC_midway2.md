@@ -1,8 +1,9 @@
 ## Deep-learning-practice using the RCC Midway2 cluster
 
 ### Grabbing a gpu2 node from midway2.rcc.uchicago.edu (after login)
+Asking for 1 GPU, 1 CPU, 16GB RAM for 1 hour
 ```sh
-sinteractive -p gpu2 --gres=gpu:1 --time=1:00:00
+sinteractive -p gpu2 --gres=gpu:1 --ntasks=1 --nodes=1 --mem-per-cpu=16000 --time=1:00:00
 ```
 
 ### Monitoring CPU, GPU, RAM usage
