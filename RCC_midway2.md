@@ -5,7 +5,23 @@
 sinteractive -p gpu2 --gres=gpu:1 --time=1:00:00
 ```
 
-### Using pytorch + fastai
+### Monitoring CPU, GPU, RAM usage
+Once logged in to a gpu2 node, open two terminals.
+```sh
+xterm &
+xterm &
+```
+In one terminal, run htop to monitor the CPU/RAM usage
+```sh
+htop
+```
+
+In the other terminal, run nvidia-smi to monitor the GPU usage
+```sh
+nvidia-smi -l 1
+```
+
+### Using pytorch + fastai on top of the CUDA library
 1. To use the pytorch + fastai library, see https://github.com/fastai/fastai and install fastai
 
 2. If installed, Load the necessary modules to use pytorch + fastai
@@ -48,12 +64,7 @@ torch.cuda.is_available()       # Should be True
 torch.backends.cudnn.enabled    # Should be True
 ```
 
-8. Monitor the gpu usage by running nvidia-smi. The below script will update the gpu usage every second. Use ctrl-c to stop it.
-```sh
-(fastai) [kywch@midway2-gpu01 ~]$ nvidia-smi -l 1
-```
-
-9. To kill jupyter, ps to get the pid and use kill command.
+8. To kill jupyter, ps to get the pid and use kill command.
 
 
 
