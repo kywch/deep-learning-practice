@@ -47,12 +47,12 @@ torch.cuda.is_available()   --> Should be True
 torch.backends.cudnn.enabled    --> Should be True
 ```
 
-8. Monitor the gpu usage by running nvidia-smi (also in the background, so the console will get messy). The below script will update the gpu usage every second.
+8. Monitor the gpu usage by running nvidia-smi. The below script will update the gpu usage every second. Use ctrl-c to stop it.
 ```sh
-(fastai) [kywch@midway2-gpu01 ~]$ nvidia-smi -l 1 &
+(fastai) [kywch@midway2-gpu01 ~]$ nvidia-smi -l 1
 ```
 
-9. To kill jupyter and nvidia-smi, ps to get pids and kill those
+9. To kill jupyter, ps to get the pid and use kill command.
 
 
 
