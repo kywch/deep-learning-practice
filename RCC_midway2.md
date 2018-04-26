@@ -160,6 +160,3 @@ Finished!
 {"epoch": 49, "lr": 5.115089514063697e-06, "train_acc": 0.9974, "test_acc": 0.9398}
 ```
 
-* KervResNet34 + pytorch (https://github.com/wang-chen/KervNets): took xx:xx:xx vs. 0:35:37 on GeForce GTX 1080 Ti
-```sh
-```
