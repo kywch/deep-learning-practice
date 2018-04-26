@@ -110,8 +110,54 @@ Epoch: 100%|###########################################################| 30/30 [
 Finished!
 ```
 
-* Resnet18 mod + pytorch (https://github.com/bkj/basenet): took xx:xx:xx vs. 0:05:41 on V100 (AWS p3.2xlarge)
+* Resnet18 mod + pytorch (https://github.com/bkj/basenet): took 1:13:xx (approx, 88 s/epoch) vs. 0:05:41 on V100 (AWS p3.2xlarge)
 ```sh
+{"epoch": 4, "lr": 0.09000511508951407, "train_acc": 0.76568, "test_acc": 0.6582}
+{"epoch": 5, "lr": 0.08800511508951407, "train_acc": 0.7904, "test_acc": 0.6882}
+{"epoch": 6, "lr": 0.08600511508951407, "train_acc": 0.80408, "test_acc": 0.7999}
+{"epoch": 7, "lr": 0.08400511508951407, "train_acc": 0.81712, "test_acc": 0.7444}
+{"epoch": 8, "lr": 0.08200511508951407, "train_acc": 0.83086, "test_acc": 0.7649}
+{"epoch": 9, "lr": 0.08000511508951406, "train_acc": 0.84032, "test_acc": 0.7981}
+{"epoch": 10, "lr": 0.07800511508951406, "train_acc": 0.84712, "test_acc": 0.8266}
+{"epoch": 11, "lr": 0.07600511508951406, "train_acc": 0.85548, "test_acc": 0.8442}
+{"epoch": 12, "lr": 0.07400511508951407, "train_acc": 0.8596, "test_acc": 0.8108}
+{"epoch": 13, "lr": 0.07200511508951407, "train_acc": 0.86488, "test_acc": 0.819}
+{"epoch": 14, "lr": 0.07000511508951407, "train_acc": 0.86864, "test_acc": 0.7898}
+{"epoch": 15, "lr": 0.06800511508951407, "train_acc": 0.87684, "test_acc": 0.8503}
+{"epoch": 16, "lr": 0.06600511508951407, "train_acc": 0.88078, "test_acc": 0.8648}
+{"epoch": 17, "lr": 0.06400511508951406, "train_acc": 0.88124, "test_acc": 0.8127}
+{"epoch": 18, "lr": 0.06200511508951407, "train_acc": 0.8888, "test_acc": 0.8516}
+{"epoch": 19, "lr": 0.06000511508951407, "train_acc": 0.88956, "test_acc": 0.8643}
+{"epoch": 20, "lr": 0.058005115089514066, "train_acc": 0.89536, "test_acc": 0.8568}
+{"epoch": 21, "lr": 0.056005115089514064, "train_acc": 0.8962, "test_acc": 0.8515}
+{"epoch": 22, "lr": 0.05400511508951407, "train_acc": 0.90234, "test_acc": 0.8488}
+{"epoch": 23, "lr": 0.05200511508951407, "train_acc": 0.9033, "test_acc": 0.8768}
+{"epoch": 24, "lr": 0.050005115089514066, "train_acc": 0.9103, "test_acc": 0.8499}
+{"epoch": 25, "lr": 0.048005115089514064, "train_acc": 0.91268, "test_acc": 0.8659}
+{"epoch": 26, "lr": 0.04600511508951406, "train_acc": 0.91638, "test_acc": 0.8607}
+{"epoch": 27, "lr": 0.04400511508951406, "train_acc": 0.9201, "test_acc": 0.8391}
+{"epoch": 28, "lr": 0.04200511508951407, "train_acc": 0.91876, "test_acc": 0.8678}
+{"epoch": 29, "lr": 0.04000511508951407, "train_acc": 0.92278, "test_acc": 0.8596}
+{"epoch": 30, "lr": 0.03800511508951407, "train_acc": 0.93008, "test_acc": 0.8841}
+{"epoch": 31, "lr": 0.03600511508951407, "train_acc": 0.93084, "test_acc": 0.8955}
+{"epoch": 32, "lr": 0.034005115089514065, "train_acc": 0.93384, "test_acc": 0.8942}
+{"epoch": 33, "lr": 0.032005115089514063, "train_acc": 0.9377, "test_acc": 0.8878}
+{"epoch": 34, "lr": 0.03000511508951407, "train_acc": 0.9422, "test_acc": 0.8909}
+{"epoch": 35, "lr": 0.028005115089514067, "train_acc": 0.94386, "test_acc": 0.8949}
+{"epoch": 36, "lr": 0.026005115089514065, "train_acc": 0.94732, "test_acc": 0.9095}
+{"epoch": 37, "lr": 0.024005115089514067, "train_acc": 0.95406, "test_acc": 0.8747}
+{"epoch": 38, "lr": 0.022005115089514065, "train_acc": 0.95848, "test_acc": 0.9152}
+{"epoch": 39, "lr": 0.020005115089514063, "train_acc": 0.9618, "test_acc": 0.9079}
+{"epoch": 40, "lr": 0.018005115089514065, "train_acc": 0.96534, "test_acc": 0.9077}
+{"epoch": 41, "lr": 0.016005115089514063, "train_acc": 0.97102, "test_acc": 0.9207}
+{"epoch": 42, "lr": 0.014005115089514065, "train_acc": 0.97502, "test_acc": 0.9231}
+{"epoch": 43, "lr": 0.012005115089514065, "train_acc": 0.98022, "test_acc": 0.9217}
+{"epoch": 44, "lr": 0.010005115089514065, "train_acc": 0.98418, "test_acc": 0.9277}
+{"epoch": 45, "lr": 0.008005115089514065, "train_acc": 0.9886, "test_acc": 0.931}
+{"epoch": 46, "lr": 0.006005115089514064, "train_acc": 0.99246, "test_acc": 0.9355}
+{"epoch": 47, "lr": 0.004005115089514064, "train_acc": 0.995, "test_acc": 0.9377}
+{"epoch": 48, "lr": 0.0020051150895140637, "train_acc": 0.99704, "test_acc": 0.9389}
+{"epoch": 49, "lr": 5.115089514063697e-06, "train_acc": 0.9974, "test_acc": 0.9398}
 ```
 
 * KervResNet34 + pytorch (https://github.com/wang-chen/KervNets): took xx:xx:xx vs. 0:35:37 on GeForce GTX 1080 Ti
