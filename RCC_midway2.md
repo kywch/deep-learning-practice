@@ -71,7 +71,7 @@ torch.backends.cudnn.enabled    # Should be True
 ### Performance benchmarks: CIFAR10 training time
 Using a gpu2 node: 1 Tesla K80 gpu and 2 CPU cores
 
-* Custom Wide Resnet + fastai + pytorch single gpu (https://github.com/fastai/imagenet-fast/tree/master/cifar10): took 1:21:03 vs. 0:06:45 on Paperspace Volta (V100)
+* Custom Wide Resnet + fastai + pytorch, single gpu (https://github.com/fastai/imagenet-fast/tree/master/cifar10): took 1:21:03 vs. 0:06:45 on Paperspace Volta (V100)
 ```sh
 (fastai) [kywch@midway2-gpu01 cifar10]$ python dawn_mod.py data --save-dir data/cf_train_save/wrn_v5 -a wrn_22 --fp16 --loss-scale 512 --epochs 1 --cycle-len 30 --lr 1.5 --wd 1e-4 --use-clr 20,20,0.95,0.85
 
@@ -108,10 +108,12 @@ Epoch:  93%|#######################################################    | 28/30 [
 Epoch:  97%|#########################################################  | 29/30 [1:18:21<02:42, 162.13s/it]    29     0.021141   0.215322   0.9395                                                                   
 Epoch: 100%|###########################################################| 30/30 [1:21:03<00:00, 162.13s/it]
 Finished!
-
-
 ```
 
+* Resnet18 mod + pytorch (https://github.com/bkj/basenet): took xx:xx:xx vs. 0:05:41 on V100 (AWS p3.2xlarge)
+```sh
+```
 
-
-
+* KervResNet34 + pytorch (https://github.com/wang-chen/KervNets): took xx:xx:xx vs. 0:35:37 on GeForce GTX 1080 Ti
+```sh
+```
