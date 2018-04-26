@@ -71,7 +71,7 @@ torch.backends.cudnn.enabled    # Should be True
 ### Performance benchmarks: CIFAR10 training time
 Using a gpu2 node, 1 Tesla K80 gpu. 
 
-* Custom Wide Resnet + fastai + pytorch single gpu [Source](https://github.com/fastai/imagenet-fast/tree/master/cifar10) took 1:21:03 vs. 0:06:45 on Paperspace Volta (V100)
+* Custom Wide Resnet + fastai + pytorch single gpu (Source)](https://github.com/fastai/imagenet-fast/tree/master/cifar10): took 1:21:03 vs. 0:06:45 on Paperspace Volta (V100)
 ```sh
 (fastai) [kywch@midway2-gpu01 cifar10]$ python dawn_mod.py data --save-dir data/cf_train_save/wrn_v5 -a wrn_22 --fp16 --loss-scale 512 --epochs 1 --cycle-len 30 --lr 1.5 --wd 1e-4 --use-clr 20,20,0.95,0.85
 
