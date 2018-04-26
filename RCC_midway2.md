@@ -68,8 +68,7 @@ torch.backends.cudnn.enabled    # Should be True
 8. To kill jupyter, ps to get the pid and use kill command.
 
 
-### Performance benchmarks: CIFAR10 training time
-See https://dawn.cs.stanford.edu/benchmark/#cifar10
+### Performance benchmarks: [CIFAR10 training time] (https://dawn.cs.stanford.edu/benchmark/#cifar10)
 Using a gpu2 node: 1 Tesla K80 gpu and 2 CPU cores
 
 * Custom Wide Resnet + fastai + pytorch, single gpu (https://github.com/fastai/imagenet-fast/tree/master/cifar10): took 1:21:03 vs. 0:06:45 on Paperspace Volta (V100)
