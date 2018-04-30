@@ -1,3 +1,9 @@
+### Creating a paperspace box
+
+If you create a paperspace account through [this link](https://www.paperspace.com/&R=UBZSZHP), you will receive $10 in credit immediately after adding a valid payment method!!
+
+---
+
 ### Running a jupyter server on a paperspace box
 ssh into the server and run
 ```sh
