@@ -10,6 +10,8 @@ torch.backends.cudnn.enabled    # Should be True
 
 ###Installing fastai: https://github.com/fastai/fastai
 
+First, delete the existing fastai directory and do a clean install by doing the following:
+
 Recommended installation approach is to clone fastai using `git`:
 
 ```sh
