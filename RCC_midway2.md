@@ -5,7 +5,7 @@ Asking for 1 GPU, 1 CPU, 8GB RAM for 1 hour
 ```sh
 sinteractive -p gpu2 --nodes=1 --gres=gpu:1 --ntasks-per-node=1 --mem=8000 --time=1:00:00
 ```
-When asking for 2 gpus, use --gres-flags=enforce-binding (https://research.computing.yale.edu/support/hpc/user-guide/gpus-and-cuda) 
+When asking for 2 gpus, use *--gres-flags=enforce-binding* (https://research.computing.yale.edu/support/hpc/user-guide/gpus-and-cuda) 
 
 ### Monitoring CPU, GPU, RAM usage
 Once logged in to a gpu2 node, open two terminals.
