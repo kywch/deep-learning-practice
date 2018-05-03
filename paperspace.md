@@ -52,6 +52,14 @@ conda env update
 
 Some troubleshooting: follow this: https://medium.com/@GuruAtWork/fast-ai-lesson-1-7fc38e978d37
 
+#### Advanced jupyter setup (e.g., using jupyter on https without the token)
+Generate the config file and follow http://jupyter-notebook.readthedocs.io/en/latest/public_server.html#running-a-public-notebook-server
+
+For paperspace (https://www.paperspace.com), we have to set UFW to allow us accessing the port of the notebook server. This can be done with the following command. [Reference](https://by-the-water.github.io/posts/2017/05/16/setting-up-a-jupyter-notebook-server-on-paperspace.html) 
+```sh
+sudo ufw allow [your notebook server port]
+```
+Then we can access jupyter notebook from anywhere using a simplified link: https://[your public IP]:[your port] 
 
 ---
 ### paperspace SSD storage vs. midway storage
