@@ -11,7 +11,7 @@ conda activate fastai
 jupyter notebook
 ```
 
-https://184.105.190.246:7890 
+https://184.105.5.189:7890/ 
 
 Testing whether the jupyter notebook has access to cuda
 ```python
