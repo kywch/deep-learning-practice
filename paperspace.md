@@ -107,6 +107,7 @@ Epoch: [0][2100/14090]  Time 0.838 (0.833)      Data 0.000 (0.003)      Loss 4.0
 ```
 
 *Paperspace, Volta 100*
+* Using single precision can double the speed (https://www.xcelerit.com/computing-benchmarks/insights/benchmarks-deep-learning-nvidia-p100-vs-v100-gpu), BUT then V100 is so fast, so the bottleneck is the data fetching. So for our training, 8 CPUs are working 90+% and the GPU is going back and forth between 0 and 100%. 
 ```sh
 Epoch: [0][10/14090]    Time 0.142 (0.658)      Data 0.001 (0.201)      Loss 6.5146 (6.8311)    Prec@1 0.000 (0.284)      Prec@5 0.000 (0.994)
 Epoch: [0][20/14090]    Time 0.142 (0.412)      Data 0.001 (0.106)      Loss 6.1472 (6.6016)    Prec@1 0.000 (0.298)      Prec@5 3.906 (1.711)
