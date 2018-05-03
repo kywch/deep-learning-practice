@@ -145,7 +145,7 @@ Epoch: [0][200/14090]   Time 0.142 (0.185)      Data 0.032 (0.050)      Loss 5.3
 *Paperspace, Volta P6000*
 Double precision (95+% GPU usage, mem 6.0GB)
 ```sh
-(fastai) paperspace@psd3qxq32:~/Places365$ python train2.py data --save-dir xlog_180502_resnet18_fp32 -a resnet18 -b 128 --sz 256 -p 10
+(fastai) paperspace@psd3qxq32:~/Places365$ python train2.py data -a resnet18 -b 128 --sz 256 -p 10
 ~~epoch hours   top1Accuracy
 
 Epoch: [0][10/14090]    Time 0.216 (0.889)      Data 0.000 (0.143)      Loss 6.5587 (6.7967)    Prec@1 0.781 (0.142)    Prec@5 3.125 (1.420)
@@ -170,7 +170,7 @@ Epoch: [0][180/14090]   Time 0.217 (0.257)      Data 0.001 (0.009)      Loss 5.4
 
 Single precision (95+% GPU usage, mem 3.4GB)
 ```sh
- python train2.py data --save-dir xlog_180502_resnet18_fp32 -a resnet18 -b 128 --sz 256 -p 10 --fp16
+ python train2.py data -a resnet18 -b 128 --sz 256 -p 10 --fp16
 ~~epoch hours   top1Accuracy
 
 Epoch: [0][10/14090]    Time 0.184 (0.562)      Data 0.001 (0.128)      Loss 6.5547 (6.8061)    Prec@1 0.000 (0.426)    Prec@5 0.000 (1.420)
