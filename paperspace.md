@@ -61,6 +61,9 @@ sudo ufw allow [your notebook server port]
 ```
 Then we can access jupyter notebook from anywhere using a simplified link: https://[your public IP]:[your port] 
 
+#### Downloading the Places2 dataset without storing it (takes 3~4 hours)
+wget -qO- http://data.csail.mit.edu/places/places365/places365standard_easyformat.tar | tar xv > /dev/null
+
 ---
 ### paperspace SSD storage vs. midway storage
 ```sh
