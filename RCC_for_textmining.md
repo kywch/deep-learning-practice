@@ -8,7 +8,7 @@ sinteractive --nodes=1 --ntasks-per-node=1 --mem=8000 --time=1:00:00
 This will usually grab a sandyb	(16 x Intel E5-2670 2.6GHz, 32 GB Ram). If necessary, use -p flag to grab another class of nodes.
 See https://rcc.uchicago.edu/docs/using-midway/index.html for the types of nodes.
 
-* used the bigmem node, 25 cores, 150 GB ram.
+* used the bigmem2, 21 cores, 100 GB ram.
 
 ### Monitoring CPU, GPU, RAM usage
 Once logged in, open a terminal to monitor the system performance.
