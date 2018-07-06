@@ -41,6 +41,7 @@ conda install -c anaconda unidecode
 3. pubmed parser ( https://github.com/titipata/pubmed_parser ): copy the pubmed_parser directory under the working directory
 
 4. Network X ( https://anaconda.org/anaconda/networkx ) for network analyses using python
+-- NOTE: RCC anaconda3/5.1.0 has networkx 2.0 installed. 
 ```sh
 conda install -c anaconda networkx
 ```
