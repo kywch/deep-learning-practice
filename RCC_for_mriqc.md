@@ -33,3 +33,11 @@ For example, ~/NUBE_data/rawdata, ~/NUBE_data/mriqc, pilot01,
 ```sh
 $ mriqc RAWDATA_DIR OUTPUT_DIR participant --participant_label PARTICIPANT_ID --no-sub
 ```
+
+### Make a symbolic link of the data directory to home directory
+```sh
+$ cd ~
+$ ln -s /project2/bermanm/NUBE_data
+```
+
+
