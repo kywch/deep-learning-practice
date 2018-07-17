@@ -1,9 +1,9 @@
 ## Using mriqc on the RCC Midway cluster
 
 ### Grabbing a node from midway.rcc.uchicago.edu (after login)
-Asking for 1 GPU, 8 CPU, 16GB RAM for 3 hour
+Asking for 1 GPU, 8 CPU, 16GB RAM for 1 hour
 ```sh
-sinteractive -p sandyb --nodes=1 --ntasks-per-node=8 --mem=16000 --time=3:00:00
+sinteractive -p sandyb --nodes=1 --ntasks-per-node=8 --mem=16000 --time=1:00:00
 ```
 This will grab a sandyb	(16 x Intel E5-2670 2.6GHz, 32 GB Ram). 
 
