@@ -22,41 +22,46 @@ htop
 1. Load the necessary python modules -- using Anaconda allows us to install the required packages (e.g., unicodec, nltk). If you are not sure about the version, try 'module avail Anaconda3' 
 ```sh
 module load Anaconda3/5.3.0
+conda activate scipygeo18
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#### Installing the packages ####
-1. nltk ( https://anaconda.org/anaconda/nltk ):
+1-2. If you have not setup your conda environment (i.e., scipygeo18), copy the geospatial_environment.yml file and run the below command. It sets up geopandas, geoplot, pysal, etc ...
 ```sh
-conda install -c anaconda nltk
+conda env create -f geospatial_environment.yml
 ```
 
-2. unidecode ( https://anaconda.org/anaconda/unidecode ): 
+### Running jupyter notebook on the node
+For jupyter notebook related instructions, see https://git.rcc.uchicago.edu/ivy2/Jupyter_on_compute_nodes
+
+1. Load Anaconda3 module like above
+2. Find out an ip address of the node:
 ```sh
-conda install -c anaconda unidecode
+(fastai) [kywch@midway2-gpu01 ~]$ ifconfig eno1 | grep 'inet '
+        inet 10.50.221.191  netmask 255.255.252.0  broadcast 10.50.223.255
 ```
-
-3. pubmed parser ( https://github.com/titipata/pubmed_parser ): copy the pubmed_parser directory under the working directory
-
-4. Network X ( https://anaconda.org/anaconda/networkx ) for network analyses using python
--- NOTE: RCC anaconda3/5.1.0 has networkx 2.0 installed. 
+3. Start jupyter without launching a browser on the node (add & at the end to run in the background), using the ip address obtained above: 
 ```sh
-conda install -c anaconda networkx
+(fastai) [kywch@midway2-gpu01 ~]$ jupyter notebook --no-browser --ip=10.50.221.191 &
 ```
+4. By default, it would listen on port 8888. However, if the port is already taken by another user, it will complain. Try the next available port with --port=<port number> option.
+
+5. Eventually, you'll get a URL with a token. For example: http://10.50.221.191:8888/?token=2af56958386caf78d5bdc2086b20b6ff18553b701c581cd3
+
+6. Point the browser running on your laptop/desktop to this URL. Notice: compute nodes are only visible on internal uchicago network. Therefore, you either need to be on campus or use VPN to be able to use this method.
+
+7. **To use GPU-accelerated libraries in jupyter notebook, use Python [conda env:DL_GPU] kernel.** (although, I'm not sure. The default kernel seems to use cuda. However, you can check -->) In the notebook, check whether it works by running.
+```python
+import torch
+torch.cuda.is_available()       # Should be True
+torch.backends.cudnn.enabled    # Should be True
+```
+
+
+
+
+
+
+
+
+
+
+
