@@ -6,7 +6,7 @@ Asking for 1 GPU, 1 CPU, 8GB RAM for 1 hour
 sinteractive --nodes=1 --ntasks-per-node=1 --mem=8000 --time=1:00:00
 ```
 This will usually grab a sandyb	(16 x Intel E5-2670 2.6GHz, 32 GB Ram). If necessary, use -p flag to grab another class of nodes.
-See https://rcc.uchicago.edu/docs/using-midway/index.html for the types of nodes.
+See https://rcc.uchicago.edu/docs/using-midway/index.html for the types of nodes. We may want to use --exclusive flag.
 
 ### Monitoring CPU, RAM usage
 Once logged in, open a terminal to monitor the system performance.
