@@ -23,6 +23,10 @@ In the other terminal, run nvidia-smi to monitor the GPU usage
 nvidia-smi -l 1
 ```
 
+### deep-learning frameworks in the midway ###
+https://128.135.112.102/rcc-public/dl-frameworks
+
+
 ### Using pytorch + fastai on top of the CUDA library
 1. To use the pytorch + fastai library, see https://github.com/fastai/fastai and install fastai
 
