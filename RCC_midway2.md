@@ -25,6 +25,29 @@ nvidia-smi -l 1
 
 ### deep-learning frameworks in the midway ###
 https://128.135.112.102/rcc-public/dl-frameworks
+https://128.135.112.102/rcc-public/dl-frameworks/blob/master/quickstart.txt
+
+```sh
+
+Pytorch: 
+
+1) Sinteractive to gpu2 node
+2) module load Anaconda3/2019.03
+3) module load cuda/10.0
+4) source activate pytorch-gpu-1.2-cuda-10.0
+5) Open Python interactively 
+
+Run code examples: 
+
+import torch
+torch.cuda.current_device()
+torch.cuda.device(0)
+torch.cuda.device_count()
+torch.cuda.get_device_name(0)
+torch.cuda.is_available()
+
+```
+
 
 
 ### Using pytorch + fastai on top of the CUDA library
