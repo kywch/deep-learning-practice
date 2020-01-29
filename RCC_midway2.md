@@ -49,7 +49,25 @@ torch.cuda.device_count()
 torch.cuda.get_device_name(0)
 ```
 
+### Using jupyter notebook on the gpu2 node
+For jupyter notebook related instructions, see https://git.rcc.uchicago.edu/ivy2/Jupyter_on_compute_nodes
 
+1. Find out an ip address of the node:
+```sh
+(pytorch-gpu-1.2-cuda-10.0) [kywch@midway2-gpu01 ~]$ ifconfig eno1 | grep 'inet '
+        inet 10.50.221.191  netmask 255.255.252.0  broadcast 10.50.223.255
+```
+2. Start jupyter without launching a browser on the node (add & at the end to run in the background), using the ip address obtained above: 
+```sh
+(pytorch-gpu-1.2-cuda-10.0) [kywch@midway2-gpu01 ~]$ jupyter notebook --no-browser --ip=10.50.221.191 &
+```
+3. By default, it would listen on port 8888. However, if the port is already taken by another user, it will complain. Try the next available port with --port=<port number> option.
+
+
+
+
+
+## Obsolete stuffs
 
 ### Using pytorch + fastai on top of the CUDA library
 1. To use the pytorch + fastai library, see https://github.com/fastai/fastai and install fastai
