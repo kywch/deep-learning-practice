@@ -40,7 +40,6 @@ Pytorch:
 Run code examples: 
 
 import torch
-import torch
 torch.cuda.is_available()       # Should be True
 torch.backends.cudnn.enabled    # Should be True
 torch.cuda.current_device()
@@ -48,6 +47,9 @@ torch.cuda.device(0)
 torch.cuda.device_count()
 torch.cuda.get_device_name(0)
 ```
+
+* Note on 2020/01/31: The opencv installed in midway does not work well with the python in Anaconda3/2019.03. RCC will look into this issue, but in the meanwhile, installing opencv in one's own account can fix this problem using the command: pip install --user opencv-python
+
 
 ### Using jupyter notebook on the gpu2 node
 For jupyter notebook related instructions, see https://git.rcc.uchicago.edu/ivy2/Jupyter_on_compute_nodes
