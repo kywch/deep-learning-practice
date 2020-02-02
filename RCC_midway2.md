@@ -34,7 +34,7 @@ Pytorch:
 1) Sinteractive to gpu2 node
 2) module load Anaconda3/2019.03
 3) module load cuda/10.0
-4) source activate pytorch-gpu-1.2-cuda-10.0
+4) source activate rcctorch-1.2 # note that rcctorch-1.2 is the cloned copy of pytorch-gpu-1.2-cuda-10.0, but with torchvision
 5) Open Python interactively 
 
 Run code examples: 
@@ -46,6 +46,10 @@ torch.cuda.current_device()
 torch.cuda.device(0)
 torch.cuda.device_count()
 torch.cuda.get_device_name(0)
+
+# the below should run as well
+import cv2
+import torchvision
 ```
 
 * Note on 2020/01/31: The opencv installed in midway does not work well with the python in Anaconda3/2019.03. RCC will look into this issue, but in the meanwhile, installing opencv in one's own account can fix this problem using the command: ```pip install --user opencv-python```
