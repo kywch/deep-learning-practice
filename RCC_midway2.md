@@ -48,7 +48,8 @@ torch.cuda.device_count()
 torch.cuda.get_device_name(0)
 ```
 
-* Note on 2020/01/31: The opencv installed in midway does not work well with the python in Anaconda3/2019.03. RCC will look into this issue, but in the meanwhile, installing opencv in one's own account can fix this problem using the command: pip install --user opencv-python
+* Note on 2020/01/31: The opencv installed in midway does not work well with the python in Anaconda3/2019.03. RCC will look into this issue, but in the meanwhile, installing opencv in one's own account can fix this problem using the command: ```pip install --user opencv-python```
+* Note on 2020/02/02: The conda env 'pytorch-gpu-1.2-cuda-10.0' does not have torchvision. To install torchvision, I cloned it to my personal directory using ```conda create --name rcctorch-1.2 --clone pytorch-gpu-1.2-cuda-10.0``` . Then in the rcctorch-1.2 env, I installed torchvision by running (1) ```conda activate rcctorch-1.2``` then (2) ```conda install -c pytorch torchvision```
 
 
 ### Using jupyter notebook on the gpu2 node
